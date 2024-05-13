@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Breaking Bad",
+    "date": "2008–2013",
+    "rating": "9.5",
+    "releaseDate": "January 20, 2008 (United States)",
+    "poster": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_QL75_UX380_CR0",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ]
+  },
+  {
+    "title": "Better Call Saul",
+    "date": "2015–2022",
+    "rating": "9.0",
+    "releaseDate": "February 8, 2015 (United States)",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_QL75_UX380_CR0",
+    "genres": [
+      "Crime",
+      "Drama"
+    ]
+  }
+]

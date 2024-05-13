@@ -92,19 +92,24 @@ const urls = [
         genres.push(genre);
       });
 
-      moviesData.push({ title, date, rating, releaseDate, poster, genres });
+      // ? Using the "copy selector"
+      const popularity = $(
+        "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c41b9732-0.NeSef > section > div:nth-child(5) > section > section > div.sc-92625f35-4.iDcoFI > div.sc-92625f35-6.gHKhNg > div.sc-92625f35-11.eyxQlE > div.sc-3a4309f8-0.bjXIAP.sc-b7c53eda-5.cxlubq > div > div:nth-child(3) > a > span > div > div.sc-5f7fb5b4-0.brylPD > div"
+      ).eq(0).text();
+
+      moviesData.push({ title, date, rating, popularity, releaseDate, poster, genres });
     }
     // Output JSON format
     console.log(JSON.stringify(moviesData, null, 2));
 
     // * Save to json file
-    // fs.writeFileSync('./data/multiple-movies.json', JSON.stringify(moviesData, null, 2))
+    // fs.writeFileSync('../data/multiple-movies.json', JSON.stringify(moviesData, null, 2))
 
     // * Save to csv file
     const json2csvParser = new Json2csvParser();
     const csv = json2csvParser.parse(moviesData);
 
-    fs.writeFileSync('./data/multiple-movies.csv', csv, 'utf-8');
+    fs.writeFileSync('../data/multiple-movies.csv', csv, 'utf-8');
   } catch (error) {
     console.error("Error fetching the page:", error.message);
   }
