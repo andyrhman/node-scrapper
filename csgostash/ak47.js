@@ -25,6 +25,11 @@ const cheerio = require("cheerio");
         const link =
           $(element).find(findLink.get(1)).attr("href") || null;
 
+        /* 
+          ? Alternative
+          * const link = $(element).find('.well.result-box.nomargin > a').eq(1).attr("href") || null;
+        */
+
         const image =
           $(element)
             .find(
