@@ -1,6 +1,6 @@
 // ? https://chatgpt.com/c/cf8d8457-46fb-466d-b08a-7472b3633a14
-const axios = require("axios");
-const cheerio = require("cheerio");
+import axios from "axios";
+import cheerio from "cheerio";
 
 (async () => {
   try {

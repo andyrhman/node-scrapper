@@ -1,9 +1,9 @@
 // ? https://chatgpt.com/c/cf8d8457-46fb-466d-b08a-7472b3633a14
-const axios = require("axios");
-const cheerio = require("cheerio");
-const fs = require("fs");
-const Json2csvParser = require("json2csv").Parser;
-const request = require("request");
+import axios from "axios";
+import cheerio from "cheerio";
+import fs from "fs";
+import { Parser as Json2csvParser } from "json2csv";
+import request from "request";
 
 const urls = [
   { url: "https://m.imdb.com/title/tt0903747/", id: "breaking_bad" },
@@ -97,7 +97,7 @@ const urls = [
     // ? Using Promise to stop the download stream when downloading images
     // ? without using Promise you could potentially block by the server
     await new Promise(async (resolve, reject) => {
-      const file = fs.createWriteStream(`./data/image/${movies.id}.jpg`);
+      const file = fs.createWriteStream(`../data/image/${movies.id}.jpg`);
 
       // Download the image
       const imgResponse = await axios({
@@ -148,13 +148,13 @@ const urls = [
   console.log(JSON.stringify(moviesData, null, 2));
 
   // * Save to json file
-  // fs.writeFileSync('./data/multiple-movies.json', JSON.stringify(moviesData, null, 2))
+  // fs.writeFileSync('../data/multiple-movies.json', JSON.stringify(moviesData, null, 2))
 
   // * Save to csv file
   //const json2csvParser = new Json2csvParser();
   //const csv = json2csvParser.parse(moviesData);
 
-  //fs.writeFileSync("./data/multiple-movies.csv", csv, "utf-8");
+  //fs.writeFileSync("../data/multiple-movies.csv", csv, "utf-8");
 })().catch((error) => {
   console.error("Error fetching the page:", error);
 });

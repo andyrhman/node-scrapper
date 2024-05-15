@@ -21,5 +21,17 @@
       "Crime",
       "Drama"
     ]
+  },
+  {
+    "title": "The Walking Dead",
+    "date": "2010–2022",
+    "rating": "8.1",
+    "releaseDate": "October 31, 2010 (United States)",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNzI5MjUyYTEtMTljZC00NGI5LWFhNWYtYjY0ZTQ5YmEzMWRjXkEyXkFqcGdeQXVyMTY3MDE5MDY1._V1_QL75_UX380_CR0",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ]
   }
 ]
