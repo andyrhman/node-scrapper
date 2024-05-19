@@ -1,12 +1,6 @@
 import requestPromise from "request-promise";
 import * as cheerio from "cheerio";
 
-/* 
-! TRY CHECK THE FETCHING ON THE SECOND COOKIE OF AXIOS AGAIN
-! BECAUSE THE REQUEST-PROMISE SEEMS TO SHOW DIFFERENT COOKIE AFTER THE LOGIN
-! AND AXIOS JUST SHOWS THE SAME COOKIE
-
-*/
 (async () => {
   console.log(`Initial request to get the csrf_token value..`);
   let initialRequest = await requestPromise({

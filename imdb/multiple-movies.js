@@ -1,6 +1,6 @@
 // ? https://chatgpt.com/c/cf8d8457-46fb-466d-b08a-7472b3633a14
 import axios from "axios";
-import cheerio from "cheerio";
+import * as cheerio from 'cheerio';
 import fs from "fs";
 import { Parser as Json2csvParser } from "json2csv";
 import request from "request";
